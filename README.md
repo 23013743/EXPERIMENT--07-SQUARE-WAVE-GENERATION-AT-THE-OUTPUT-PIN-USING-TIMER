@@ -1,5 +1,8 @@
 # EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER
 
+## Name:Gokul S
+## Reg.no:212223040051
+
 ### Aim:
 To generate a PWM wave at the timer pin output and  simuate it on  proteus using an virtual oscilloscope  
 
@@ -96,7 +99,6 @@ Step14. click on debug and simulate using simulation as shown below
   
 
 ## STM 32 CUBE PROGRAM :
-```c
 #include "main.h"
 
 TIM_HandleTypeDef htim2;
@@ -111,9 +113,11 @@ int main(void)
   SystemClock_Config();
   MX_GPIO_Init();
   MX_TIM2_Init();
+
+  // Start Timer and PWM
   HAL_TIM_Base_Start(&htim2);
   HAL_TIM_PWM_Init(&htim2);
-  HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 
   while (1)
   {
@@ -137,8 +141,8 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+                              | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
@@ -159,7 +163,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 0;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 1000;
+  htim2.Init.Period = 10000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -182,13 +186,14 @@ static void MX_TIM2_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 500;
+  sConfigOC.Pulse =5000;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
   {
     Error_Handler();
   }
+
   HAL_TIM_MspPostInit(&htim2);
 }
 
@@ -205,47 +210,40 @@ void Error_Handler(void)
   }
 }
 
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 void assert_failed(uint8_t *file, uint32_t line)
 {
 }
-#endif
-```
+
+
 
 
 
 
 ## Output screen shots of proteus  :
-<img width="1195" height="842" alt="Screenshot 2025-10-30 090007" src="https://github.com/user-attachments/assets/f8013370-b483-47ac-bee6-9f923f6027ba" />
 
+<img width="1195" height="842" alt="Screenshot 2025-10-30 090007" src="https://github.com/user-attachments/assets/8c9b7023-40e2-40c2-83b0-a0bf383284b7" />
+
+
+ <img width="1107" height="772" alt="image" src="https://github.com/user-attachments/assets/161da099-1635-430d-971d-38ff186bafd8" />
 
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
-<img width="1107" height="772" alt="image" src="https://github.com/user-attachments/assets/326c229e-e860-4fc0-879c-2f1b95c19cd8" />
+ <img width="1298" height="916" alt="image" src="https://github.com/user-attachments/assets/e37d5776-cf43-4b27-8e42-5593c9abba3a" />
 
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
+~~~
 FOR PULSE AT 500
 
-TON = 
-TOFF=
-TOTAL TIME = 
-FREQUENCY = 1/(TOTAL TIME)
-
-FOR PULSE AT 700
-
-TON = 
-TOFF=
-TOTAL TIME = 
-FREQUENCY = 1/(TOTAL TIME)
-
-
-FOR PULSE AT 900
-
-TON = 
-TOFF=
-TOTAL TIME = 
-FREQUENCY = 1/(TOTAL TIME)
+50%
+Ton+Toff=Ttotal
+f=1/Ttotal
+1.6*0.1ms+1.6*0.1ms=0.32ms
+f=1/(0.32*10^-3)= 3.125*10^3=3.13kHz
+D=Ton/Ttotal=1.6/3.2=.5
+%D=50%
+~~~
 
 
 ## Result :
