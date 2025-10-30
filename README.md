@@ -1,8 +1,5 @@
 # EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER
 
-## Name:Gokul S
-## Reg.no:212223040051
-
 ### Aim:
 To generate a PWM wave at the timer pin output and  simuate it on  proteus using an virtual oscilloscope  
 
