@@ -1,5 +1,7 @@
 # EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER
 
+## Name:Gokul S
+## Reg.no:212223040051
 
 ### Aim:
 To generate a PWM wave at the timer pin output and  simuate it on  proteus using an virtual oscilloscope  
@@ -219,12 +221,13 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 ## Output screen shots of proteus  :
+<img width="1195" height="842" alt="Screenshot 2025-10-30 090007" src="https://github.com/user-attachments/assets/53260de9-10e0-4a12-a8b8-99387578df08" />
 
-<img width="1195" height="842" alt="Screenshot 2025-10-30 090007" src="https://github.com/user-attachments/assets/8c9b7023-40e2-40c2-83b0-a0bf383284b7" />
+<img width="1373" height="852" alt="image" src="https://github.com/user-attachments/assets/3f923196-b54f-49a3-901c-0a54274b07c3" />
 
 
- <img width="1107" height="772" alt="image" src="https://github.com/user-attachments/assets/161da099-1635-430d-971d-38ff186bafd8" />
 
+ 
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
  <img width="1298" height="916" alt="image" src="https://github.com/user-attachments/assets/e37d5776-cf43-4b27-8e42-5593c9abba3a" />
