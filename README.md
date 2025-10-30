@@ -96,6 +96,7 @@ Step14. click on debug and simulate using simulation as shown below
   
 
 ## STM 32 CUBE PROGRAM :
+```
 #include "main.h"
 
 TIM_HandleTypeDef htim2;
@@ -212,7 +213,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 {
 }
 
-
+```
 
 
 
@@ -227,7 +228,7 @@ void assert_failed(uint8_t *file, uint32_t line)
  
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- <img width="1298" height="916" alt="image" src="https://github.com/user-attachments/assets/e37d5776-cf43-4b27-8e42-5593c9abba3a" />
+<img width="1107" height="772" alt="image" src="https://github.com/user-attachments/assets/11a79833-464e-4863-af07-2f4ccd571931" />
 
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
