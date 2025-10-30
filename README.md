@@ -216,12 +216,12 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 ## Output screen shots of proteus  :
-![pmc](https://github.com/user-attachments/assets/36708358-e1c3-47af-9e1c-c7c00676a016)
+<img width="1195" height="842" alt="Screenshot 2025-10-30 090007" src="https://github.com/user-attachments/assets/f8013370-b483-47ac-bee6-9f923f6027ba" />
 
 
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- <img width="908" height="727" alt="Screenshot 2025-10-15 094838" src="https://github.com/user-attachments/assets/3cfe740e-8a05-4064-8897-85263c35bc4b" />
+<img width="1107" height="772" alt="image" src="https://github.com/user-attachments/assets/326c229e-e860-4fc0-879c-2f1b95c19cd8" />
 
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
